@@ -10,5 +10,5 @@ import com.pklinventaris.InventarisKantor.Model.InventarisItem;
 @Repository
 public interface InventarisItemRepository extends JpaRepository<InventarisItem, Integer> {
 
-    List<InventarisItem> findByName(String name);
+    List<InventarisItem> findByName(String nama_barang);
 }

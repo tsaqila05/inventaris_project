@@ -1,18 +1,18 @@
 package com.pklinventaris.InventarisKantor.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "inventaris_item")
 @Getter
 @Setter
-
+@NoArgsConstructor
 
 public class InventarisItem {
     @Id
@@ -22,4 +22,9 @@ public class InventarisItem {
     private int jumlah;
     private String lokasi;
     
+    public InventarisItem(String nama_barang, int jumlah, String lokasi){
+        this.nama_barang = nama_barang;
+        this.jumlah = jumlah;
+        this.lokasi = lokasi;
+    }
 }
